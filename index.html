@@ -330,9 +330,9 @@
             }
 
             // Отправляем данные в аналитику (не блокируем основной процесс)
-            trackAnalytics().catch(err =>
-                console.error("Analytics error:", err)
-            );
+            //trackAnalytics().catch(err =>
+              //  console.error("Analytics error:", err)
+            //);
 
             // Показываем секцию загрузки
             document.getElementById('downloadInfo').classList.remove('hidden');
