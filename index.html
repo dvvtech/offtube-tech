@@ -336,7 +336,7 @@
             // Блокируем кнопку
             const downloadBtn = document.getElementById('downloadBtn');
             downloadBtn.disabled = true;
-            downloadBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Загрузка...</span>';
+            downloadBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Загрузка...   </span>';
 
             try {
                 // Инициализируем SignalR если нужно
@@ -421,7 +421,7 @@
 
             document.getElementById('progressBar').style.width = percentage + '%';
             document.getElementById('progressPercent').textContent = percentage + '%';
-            document.getElementById('statusText').textContent = progress.status || 'Загрузка...';
+            document.getElementById('statusText').textContent = progress.status || 'Загрузка...   ';
 
             if (progress.fileName) {
                 const fileName = progress.fileName.split('\\').pop().split('/').pop();
@@ -445,7 +445,7 @@
             const backendUrl = "https://api.cloud-platform.pro/offtube";
             const downloadUrl = backendUrl + data.downloadUrl;
 
-            document.getElementById('statusText').textContent = 'Загрузка завершена!';
+            document.getElementById('statusText').textContent = 'Загрузка завершена!   ';
             document.getElementById('progressBar').style.width = '100%';
             document.getElementById('progressPercent').textContent = '100%';
 
