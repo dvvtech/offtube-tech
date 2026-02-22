@@ -329,6 +329,11 @@
                 return;
             }
 
+            // Отправляем данные в аналитику (не блокируем основной процесс)
+            trackAnalytics().catch(err =>
+                console.error("Analytics error:", err)
+            );
+
             // Показываем секцию загрузки
             document.getElementById('downloadInfo').classList.remove('hidden');
             document.getElementById('errorMessage').classList.add('hidden');
@@ -358,10 +363,6 @@
                     throw new Error("Не удалось подтвердить, что вы не робот");
                 }
 
-                // Подключаемся к группе SignalR
-                //await connection.invoke("JoinDownloadGroup", downloadId);
-                //console.log("Joined group:", downloadId);
-
                 const backendUrl = "https://api.cloud-platform.pro/offtube";
 
                 // Отправляем запрос на сервер
@@ -387,10 +388,32 @@
             } catch (error) {
                 console.error("Download error:", error);
                 showError(error.message);
-            } finally {
-                // Разблокируем кнопку
-                //downloadBtn.disabled = false;
-                //downloadBtn.innerHTML = '<i class="fa-solid fa-download"></i><span>Скачать</span>';
+
+                // Разблокируем кнопку только при ошибке
+                downloadBtn.disabled = false;
+                downloadBtn.innerHTML = '<i class="fa-solid fa-download"></i><span>Скачать</span>';
+            }
+        }
+
+        async function trackAnalytics() {
+            try {
+                const analyticsUrl = "https://api.cloud-platform.pro/data-analyst/v1/analytics/track-offtube-tech";
+                
+                const response = await fetch(analyticsUrl, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }                    
+                });
+
+                if (!response.ok) {
+                    console.warn("Analytics track failed:", await response.text());
+                } else {
+                    console.log("Analytics tracked successfully");
+                }
+            } catch (error) {
+                // Не прокидываем ошибку дальше, чтобы не прерывать основной процесс
+                console.warn("Failed to track analytics:", error.message);
             }
         }
 
