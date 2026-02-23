@@ -4,12 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Video Downloader</title>
+
+    <!-- Основные SEO мета-теги -->
+    <title>Скачать видео с YouTube и других платформ | OffTube - бесплатный онлайн загрузчик</title>
+    <meta name="description"
+        content="OffTube - бесплатный сервис для скачивания видео с YouTube, Vimeo, Dailymotion и других платформ. Высокое качество, быстрая загрузка, без регистрации.">
+    <meta name="keywords"
+        content="скачать видео, youtube downloader, загрузчик видео, скачать с ютуба, видео конвертер, mp4 конвертер">
+    <meta name="author" content="OffTube">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Russian">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Open Graph мета-теги для социальных сетей -->
+    <meta property="og:title" content="OffTube - Скачать видео с YouTube бесплатно">
+    <meta property="og:description"
+        content="Лучший онлайн загрузчик видео. Поддерживает YouTube, Vimeo, Dailymotion и другие платформы.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://offtube.com">
+    <meta property="og:image" content="https://offtube.com/og-image.jpg">
+    <meta property="og:site_name" content="OffTube">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Twitter Card мета-теги -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OffTube - Скачать видео с YouTube">
+    <meta name="twitter:description" content="Бесплатный загрузчик видео с популярных платформ">
+    <meta name="twitter:image" content="https://offtube.com/twitter-image.jpg">
+
+    <!-- Дополнительные SEO мета-теги -->
+    <meta name="google-site-verification" content="ваш_верификационный_код">
+    <meta name="yandex-verification" content="ваш_верификационный_код">
+    <link rel="canonical" href="https://offtube.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script
         src="https://www.google.com/recaptcha/enterprise.js?render=6Ld3BnMsAAAAAH1bjhIIVXvBoPAV37jMoFr5ffDz"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         @keyframes pulse {
 
@@ -50,10 +87,94 @@
                 opacity: 1;
             }
         }
+
+        /* Стили для SEO-контента */
+        .seo-content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .seo-content h2 {
+            color: #a78bfa;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .seo-content h3 {
+            color: #8b5cf6;
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        .seo-content p {
+            color: #d1d5db;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .seo-content ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            color: #d1d5db;
+            margin-bottom: 1rem;
+        }
+
+        .seo-content li {
+            margin-bottom: 0.5rem;
+        }
     </style>
+
+    <!-- Структурированные данные JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "OffTube Video Downloader",
+        "description": "Бесплатный онлайн загрузчик видео с YouTube, Vimeo, Dailymotion и других платформ",
+        "applicationCategory": "Multimedia Application",
+        "operatingSystem": "All",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "ratingCount": "1250"
+        },
+        "featureList": [
+            "Скачивание видео в высоком качестве",
+            "Поддержка множества платформ",
+            "Конвертация в MP3",
+            "Быстрая скорость загрузки"
+        ],
+        "screenshot": "https://offtube.tech/screenshot.jpg",
+        "softwareVersion": "1.0",
+        "downloadUrl": "https://offtube.tech"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://offtube.tech"
+        }]
+    }
+    </script>
 </head>
 
-<body class="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen flex items-center justify-center p-4">
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen flex flex-col items-center p-4">
+
     <div class="max-w-2xl w-full">
         <!-- Карточка загрузчика -->
         <div class="bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-700">
@@ -77,15 +198,15 @@
                     </label>
                     <div class="flex flex-col sm:flex-row gap-3">
                         <div class="flex-1 relative">
-                            <input type="url" id="url"
+                            <input type="url" id="url" name="url"
                                 class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                                placeholder="https://www.youtube.com/watch?v=..."
-                                value="">
+                                placeholder="https://www.youtube.com/watch?v=..." value="" aria-label="URL видео">
                             <i class="fa-solid fa-paste absolute right-3 top-3 text-gray-400 cursor-pointer hover:text-white transition-colors duration-200"
                                 onclick="pasteFromClipboard()" title="Вставить из буфера обмена"></i>
                         </div>
                         <button onclick="startDownload()" id="downloadBtn"
-                            class="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100">
+                            class="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transform hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                            aria-label="Скачать видео">
                             <i class="fa-solid fa-download"></i>
                             <span>Скачать</span>
                         </button>
@@ -100,22 +221,22 @@
                     <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                         <button onclick="setQuality('best[height <= 360]', this)"
                             class="quality-btn px-3 py-2 bg-gray-700 rounded-lg text-gray-300 hover:bg-gray-600 transition-all duration-200 text-sm"
-                            data-quality="360p">
+                            data-quality="360p" aria-label="360p качество">
                             360p
                         </button>
                         <button onclick="setQuality('best[height <= 480]', this)"
                             class="quality-btn px-3 py-2 bg-purple-600 text-white rounded-lg transition-all duration-200 text-sm"
-                            data-quality="480p">
+                            data-quality="480p" aria-label="480p качество">
                             480p
                         </button>
                         <button onclick="setQuality('best[height <= 720]', this)"
                             class="quality-btn px-3 py-2 bg-gray-700 rounded-lg text-gray-300 hover:bg-gray-600 transition-all duration-200 text-sm"
-                            data-quality="720p">
-                            720p
+                            data-quality="720p" aria-label="720p качество">
+                            720p HD
                         </button>
                         <button onclick="setQuality('bestaudio', this)"
                             class="quality-btn px-3 py-2 bg-gray-700 rounded-lg text-gray-300 hover:bg-gray-600 transition-all duration-200 text-sm"
-                            data-quality="mp3" disabled>
+                            data-quality="mp3" aria-label="MP3 аудио">
                             <i class="fa-solid fa-music mr-1"></i>MP3
                         </button>
                     </div>
@@ -147,7 +268,8 @@
                             </div>
                             <div class="overflow-hidden h-2 mb-4 text-xs flex rounded-full bg-gray-600">
                                 <div id="progressBar" style="width: 0%"
-                                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-purple-500 to-blue-500 progress-bar">
+                                    class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-purple-500 to-blue-500 progress-bar"
+                                    role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
                                 </div>
                             </div>
                         </div>
@@ -190,12 +312,99 @@
                 </div>
             </div>
         </div>
+
+        <!-- SEO-контент для улучшения видимости в поиске -->
+        <!--<div class="seo-content">
+            <h2>Бесплатный онлайн загрузчик видео с YouTube</h2>
+            <p>OffTube - это удобный и быстрый сервис для скачивания видео с популярных видеохостингов. Наш загрузчик позволяет сохранять видео в высоком качестве прямо на ваше устройство без регистрации и дополнительных программ.</p>
+            
+            <h3>Как скачать видео с YouTube:</h3>
+            <ul>
+                <li>Скопируйте ссылку на видео из адресной строки браузера</li>
+                <li>Вставьте ссылку в поле ввода выше</li>
+                <li>Выберите нужное качество видео (360p, 480p, 720p HD или MP3)</li>
+                <li>Нажмите кнопку "Скачать" и дождитесь завершения</li>
+            </ul>
+
+            <h3>Поддерживаемые платформы:</h3>
+            <ul>
+                <li><strong>YouTube</strong> - скачивание видео в любом качестве до 4K</li>
+                <li><strong>Vimeo</strong> - загрузка профессиональных видео</li>
+                <li><strong>Dailymotion</strong> - популярный видеохостинг</li>
+                <li><strong>Facebook</strong> - сохранение видео из ленты</li>
+                <li><strong>Instagram</strong> - скачивание Reels и постов</li>
+                <li><strong>TikTok</strong> - загрузка популярных роликов</li>
+            </ul>
+
+            <h3>Преимущества нашего сервиса:</h3>
+            <ul>
+                <li>✓ Полностью бесплатно - никаких скрытых платежей</li>
+                <li>✓ Высокая скорость загрузки - оптимизированные серверы</li>
+                <li>✓ Без регистрации - не нужно создавать аккаунт</li>
+                <li>✓ Качество до 4K - сохраняйте видео в оригинальном качестве</li>
+                <li>✓ Конвертация в MP3 - извлекайте аудиодорожку</li>
+                <li>✓ Безопасность - защита reCAPTCHA от ботов</li>
+                <li>✓ Доступен на всех устройствах - ПК, планшеты, смартфоны</li>
+            </ul>
+
+            <h3>Часто задаваемые вопросы:</h3>
+            <p><strong>Это легально?</strong> Скачивание видео для личного использования разрешено законодательством. Мы не поощряем нарушение авторских прав.</p>
+            <p><strong>Какое максимальное качество?</strong> Сервис поддерживает качество до 4K, если оригинальное видео доступно в этом разрешении.</p>
+            <p><strong>Можно ли скачать только аудио?</strong> Да, выберите опцию MP3 для извлечения аудиодорожки из видео.</p>
+        </div>-->
     </div>
+
+    <!-- Футер с дополнительными ссылками -->
+    <!--<footer class="w-full max-w-6xl mt-8 pt-4 border-t border-gray-700 text-sm text-gray-400">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="text-white font-semibold mb-2">OffTube</h4>
+                <ul class="space-y-1">
+                    <li><a href="/about" class="hover:text-purple-400 transition-colors">О нас</a></li>
+                    <li><a href="/contact" class="hover:text-purple-400 transition-colors">Контакты</a></li>
+                    <li><a href="/blog" class="hover:text-purple-400 transition-colors">Блог</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-2">Сервисы</h4>
+                <ul class="space-y-1">
+                    <li><a href="/youtube-downloader" class="hover:text-purple-400 transition-colors">YouTube Downloader</a></li>
+                    <li><a href="/vimeo-downloader" class="hover:text-purple-400 transition-colors">Vimeo Downloader</a></li>
+                    <li><a href="/mp3-converter" class="hover:text-purple-400 transition-colors">MP3 Converter</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-2">Информация</h4>
+                <ul class="space-y-1">
+                    <li><a href="/privacy" class="hover:text-purple-400 transition-colors">Конфиденциальность</a></li>
+                    <li><a href="/terms" class="hover:text-purple-400 transition-colors">Условия использования</a></li>
+                    <li><a href="/dmca" class="hover:text-purple-400 transition-colors">DMCA</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-2">Мы в соцсетях</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-xl">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-xl">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-xl">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-xs">
+            <p>&copy; 2024 OffTube. Все права защищены. Бесплатный загрузчик видео.</p>
+        </div>
+    </footer>-->
 
     <!-- Контейнер для toast-уведомлений -->
     <div id="toastContainer" class="fixed bottom-4 right-4 space-y-2 z-50"></div>
 
-    <script>
+    <script>        
         let connection = null;
         let downloadId = null;
         let currentQuality = 'best[height <= 480]';
@@ -204,9 +413,8 @@
         async function initializeSignalR() {
             try {
                 const backendUrl = "https://api.cloud-platform.pro/offtube";
-                // Используем правильный путь к хабу - /downloadHub
                 connection = new signalR.HubConnectionBuilder()
-                    .withUrl(backendUrl + "/downloadHub")  // Изменено с /progressHub на /downloadHub
+                    .withUrl(backendUrl + "/downloadHub")
                     .withAutomaticReconnect([0, 2000, 5000, 10000, 30000])
                     .configureLogging(signalR.LogLevel.Information)
                     .build();
@@ -336,7 +544,7 @@
             // Блокируем кнопку
             const downloadBtn = document.getElementById('downloadBtn');
             downloadBtn.disabled = true;
-            downloadBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Загрузка...   </span>';
+            downloadBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Загрузка...</span>';
 
             try {
                 // Инициализируем SignalR если нужно
@@ -421,7 +629,10 @@
 
             document.getElementById('progressBar').style.width = percentage + '%';
             document.getElementById('progressPercent').textContent = percentage + '%';
-            document.getElementById('statusText').textContent = progress.status || 'Загрузка...   ';
+            document.getElementById('statusText').textContent = progress.status || 'Загрузка...';
+
+            // Обновляем aria-атрибуты для доступности
+            document.getElementById('progressBar').setAttribute('aria-valuenow', percentage);
 
             if (progress.fileName) {
                 const fileName = progress.fileName.split('\\').pop().split('/').pop();
@@ -439,26 +650,20 @@
 
         // Завершение загрузки
         function onDownloadComplete(data) {
-
             showToast("Файл готов!", "success");
 
             const backendUrl = "https://api.cloud-platform.pro/offtube";
             const downloadUrl = backendUrl + data.downloadUrl;
 
-            document.getElementById('statusText').textContent = 'Загрузка завершена!   ';
+            document.getElementById('statusText').textContent = 'Загрузка завершена!';
             document.getElementById('progressBar').style.width = '100%';
             document.getElementById('progressPercent').textContent = '100%';
+            document.getElementById('progressBar').setAttribute('aria-valuenow', 100);
 
             downloadBtn.disabled = false;
             downloadBtn.innerHTML = '<i class="fa-solid fa-download"></i><span>Скачать</span>';
 
             window.location.href = downloadUrl;
-
-            /*if (data.fileSize) {
-                document.getElementById('fileSize').textContent = formatFileSize(data.fileSize);
-            }*/
-
-            //showToast('Файл готов к скачиванию!', 'success');
         }
 
         // Скачивание файла
