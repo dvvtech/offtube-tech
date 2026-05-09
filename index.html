@@ -555,9 +555,6 @@
                     }
                 }
 
-                // Генерируем ID для этой загрузки
-                downloadId = generateDownloadId();
-
                 let recaptchaToken;
                 try {
                     recaptchaToken = await getRecaptchaToken();
@@ -577,7 +574,6 @@
                     body: JSON.stringify({
                         url: url,
                         quality: currentQuality,
-                        downloadId: downloadId,
                         connectionId: connection.connectionId,
                         recaptchaToken: recaptchaToken
                     })
@@ -587,6 +583,9 @@
                     const error = await response.text();
                     throw new Error(error);
                 }
+
+                const result = await response.json();
+                downloadId = result.downloadId;
 
             } catch (error) {
                 console.error("Download error:", error);
@@ -712,15 +711,6 @@
             } catch (_) {
                 return false;
             }
-        }
-
-        // Генерация ID
-        function generateDownloadId() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-                const r = Math.random() * 16 | 0;
-                const v = c === 'x' ? r : (r & 0x3 | 0x8);
-                return v.toString(16);
-            });
         }
 
         // Форматирование скорости
